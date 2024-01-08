@@ -71,23 +71,6 @@ class Main {
             console.log("Fail to read file");
             process.exit(0);
         }
-<<<<<<< HEAD
-      });
-      valueLine = valueLine.slice(0, -2) + "),\n";
-      values += valueLine;
-    });
-    values = values.slice(0, -2) + ";";
-    const sqlStatement = beginSQLInsert + values;
-    // Write File
-    writeSQL(sqlStatement, fileAndTableName, isAppend);
-
-    console.log(`SQL file created \x1B[32m${fileAndTableName}.sql\x1B[0m`);
-  } catch (err) {
-    console.log(`\x1B[31m Error:\x1B[0m ${err}`);
-  }
-}
-readCSV();
-=======
     };
     /**
      * Write SQL code
@@ -202,4 +185,3 @@ readCSV();
 
 const inserter = new Main();
 inserter.run();
->>>>>>> 2ecce310c61950f37339545e9b726fb8417f1ad1
